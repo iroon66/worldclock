@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/Button';
-import { Download, Smartphone, Globe } from 'lucide-react';
+import { Download as DownloadIcon, Smartphone, Globe } from 'lucide-react';
 
 export const Download: React.FC = () => {
   return (
@@ -28,7 +28,7 @@ export const Download: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6"
           >
-            <Download className="w-4 h-4 mr-2" />
+            <DownloadIcon className="w-4 h-4 mr-2" />
             지금 다운로드
           </motion.div>
           
