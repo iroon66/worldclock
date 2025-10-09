@@ -1,18 +1,14 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from './ui/Button';
-import { ArrowDown, Sparkles } from 'lucide-react';
+import { ArrowDown, Sparkles, Globe, Clock, Shield } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
-      
-      {/* Floating Elements */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200/30 dark:bg-blue-800/30 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute top-40 right-20 w-32 h-32 bg-purple-200/30 dark:bg-purple-800/30 rounded-full blur-xl animate-pulse delay-1000"></div>
@@ -49,7 +45,7 @@ export const Hero: React.FC = () => {
               <span className="font-semibold text-gray-800 dark:text-gray-200">직관적이고 아름다운</span> 인터페이스로 시간을 관리하세요.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Button
                 href="https://play.google.com/store/apps/details?id=com.iroon.worldclock"
                 size="lg"
@@ -70,7 +66,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="mt-12 flex items-center justify-center lg:justify-start space-x-8 text-sm text-gray-500 dark:text-gray-400"
+              className="flex items-center justify-center lg:justify-start space-x-8 text-sm text-gray-500 dark:text-gray-400"
             >
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
@@ -87,7 +83,7 @@ export const Hero: React.FC = () => {
             </motion.div>
           </motion.div>
 
-          {/* App Screenshot */}
+          {/* App Preview */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8, rotateY: 15 }}
             animate={{ opacity: 1, scale: 1, rotateY: 0 }}
@@ -99,11 +95,26 @@ export const Hero: React.FC = () => {
               <div className="relative w-80 h-[600px] mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 rounded-[3rem] p-2 shadow-2xl">
                   <div className="w-full h-full bg-black rounded-[2.5rem] overflow-hidden relative">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                    <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex flex-col items-center justify-center p-8">
                       <div className="text-center text-white">
-                        <div className="text-6xl mb-4">🌍</div>
-                        <div className="text-2xl font-bold">Between Time</div>
-                        <div className="text-lg opacity-80">앱 미리보기</div>
+                        <div className="text-6xl mb-6">🌍</div>
+                        <div className="text-3xl font-bold mb-2">Between Time</div>
+                        <div className="text-lg opacity-80 mb-8">세계시계 앱</div>
+                        
+                        <div className="space-y-4 text-left">
+                          <div className="flex items-center">
+                            <Globe className="w-5 h-5 mr-3" />
+                            <span>실시간 시간대 변환</span>
+                          </div>
+                          <div className="flex items-center">
+                            <Clock className="w-5 h-5 mr-3" />
+                            <span>위치 기반 자동 설정</span>
+                          </div>
+                          <div className="flex items-center">
+                            <Shield className="w-5 h-5 mr-3" />
+                            <span>완벽한 프라이버시</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     {/* Screen reflection */}
