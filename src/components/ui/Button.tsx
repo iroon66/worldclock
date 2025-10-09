@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion, HTMLMotionProps } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outline';
@@ -53,16 +53,15 @@ export const Button: React.FC<ButtonProps> = ({
     );
   }
 
-  const motionProps: HTMLMotionProps<"button"> = {
-    className: combinedClassName,
-    whileHover: { scale: 1.05 },
-    whileTap: { scale: 0.95 },
-    onClick,
-    disabled,
-  };
-
   return (
-    <motion.button {...motionProps}>
+    <motion.button
+      className={combinedClassName}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={onClick}
+      disabled={disabled}
+      type="button"
+    >
       {children}
     </motion.button>
   );
