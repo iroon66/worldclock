@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -40,13 +39,9 @@ export const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">
-              <Image 
-                src="/logo.png" 
-                alt="Between Time" 
-                width={40} 
-                height={40} 
-                className="rounded-xl shadow-md group-hover:shadow-lg transition-shadow duration-300" 
-              />
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl shadow-md group-hover:shadow-lg transition-shadow duration-300 flex items-center justify-center">
+                <span className="text-white font-bold text-lg">🌍</span>
+              </div>
             </div>
             <span className="text-xl font-bold gradient-text">Between Time</span>
           </Link>

@@ -1,100 +1,114 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
-import { Container } from './ui/Container';
 import { motion } from 'framer-motion';
 
 const screenshots = [
-  { title: '메인 화면', image: '/screenshots/main.png', desc: '두 시간대를 한눈에 비교' },
-  { title: '도시 선택', image: '/screenshots/select.png', desc: '전 세계 도시 검색' },
-  { title: '즐겨찾기', image: '/screenshots/favorites.png', desc: '자주 보는 도시 저장' },
-  { title: '설정', image: '/screenshots/settings.png', desc: '앱 환경 설정' },
-  { title: '상세 정보', image: '/screenshots/details.png', desc: '시간대 상세 보기' },
+  {
+    title: '메인 화면',
+    description: '깔끔하고 직관적인 인터페이스',
+    emoji: '🏠',
+    gradient: 'from-blue-500 to-cyan-500',
+  },
+  {
+    title: '도시 선택',
+    description: '전 세계 도시를 쉽게 검색',
+    emoji: '🔍',
+    gradient: 'from-purple-500 to-pink-500',
+  },
+  {
+    title: '즐겨찾기',
+    description: '자주 사용하는 도시를 빠르게 접근',
+    emoji: '⭐',
+    gradient: 'from-yellow-500 to-orange-500',
+  },
+  {
+    title: '설정',
+    description: '다양한 커스터마이징 옵션',
+    emoji: '⚙️',
+    gradient: 'from-green-500 to-emerald-500',
+  },
+  {
+    title: '상세 정보',
+    description: '시간대별 자세한 정보 제공',
+    emoji: '📊',
+    gradient: 'from-red-500 to-rose-500',
+  },
 ];
 
 export const Screenshots: React.FC = () => {
   return (
-    <section id="screenshots" className="py-16 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-      <Container>
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">
-            앱 미리보기
-          </h2>
-          <p className="text-gray-600 dark:text-gray-300">
-            Between Time의 직관적인 인터페이스를 경험하세요
-          </p>
-        </div>
+    <section id="screenshots" className="py-24 bg-gradient-to-br from-gray-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 right-20 w-64 h-64 bg-purple-200/20 dark:bg-purple-800/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-200/20 dark:bg-blue-800/20 rounded-full blur-3xl"></div>
+      </div>
 
-        {/* Featured Screenshot - 첫 번째를 크게 */}
-        <div className="mb-12 max-w-sm mx-auto">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20"
+        >
           <motion.div
-            className="group relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700"
-            whileHover={{ scale: 1.02, y: -8 }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-medium mb-6"
           >
-            <div className="relative w-full aspect-[9/19]">
-              <Image
-                src={screenshots[0].image}
-                alt={screenshots[0].title}
-                fill
-                className="object-cover"
-                sizes="(min-width: 640px) 384px, 100vw"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="text-xl font-bold mb-1">{screenshots[0].title}</h3>
-              <p className="text-sm text-white/90">{screenshots[0].desc}</p>
-            </div>
+            📱 스크린샷
           </motion.div>
-        </div>
+          
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            <span className="gradient-text">아름다운 인터페이스</span>
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Between Time의 깔끔하고 직관적인 인터페이스를 만나보세요
+          </p>
+        </motion.div>
 
-        {/* Grid of smaller screenshots */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          {screenshots.slice(1).map((s, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {screenshots.map((screenshot, index) => (
             <motion.div
-              key={i}
-              className="group relative rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 cursor-pointer"
-              whileHover={{ scale: 1.05, y: -4 }}
-              transition={{ duration: 0.2 }}
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="relative group"
             >
-              <div className="relative w-full aspect-[9/19]">
-                <Image
-                  src={s.image}
-                  alt={s.title}
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 768px) 25vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-              
-              {/* Title overlay - 항상 표시 */}
-              <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
-                <h4 className="text-xs font-semibold text-white">{s.title}</h4>
-              </div>
+              <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                {/* Phone Frame */}
+                <div className="relative w-full h-96 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-3">
+                  <div className="w-full h-full bg-black rounded-xl overflow-hidden relative">
+                    <div className={`w-full h-full bg-gradient-to-br ${screenshot.gradient} flex flex-col items-center justify-center text-white relative`}>
+                      <div className="text-6xl mb-4">{screenshot.emoji}</div>
+                      <div className="text-2xl font-bold mb-2">{screenshot.title}</div>
+                      <div className="text-lg opacity-80 text-center px-4">{screenshot.description}</div>
+                    </div>
+                    {/* Screen reflection */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
+                  </div>
+                  
+                  {/* Home indicator */}
+                  <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-white/30 rounded-full"></div>
+                </div>
 
-              {/* Description - 호버 시 표시 */}
-              <div className="absolute inset-0 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="text-center">
-                  <h4 className="text-sm font-bold text-white mb-1">{s.title}</h4>
-                  <p className="text-xs text-white/90">{s.desc}</p>
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-xl font-semibold mb-2">{screenshot.title}</h3>
+                  <p className="text-sm text-gray-200">{screenshot.description}</p>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* Bottom decoration */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-sm text-gray-600 dark:text-gray-400">
-            <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-            실제 앱 화면
-          </div>
-        </div>
-      </Container>
+      </div>
     </section>
   );
 };

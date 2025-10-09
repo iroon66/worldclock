@@ -99,14 +99,13 @@ export const Hero: React.FC = () => {
               <div className="relative w-80 h-[600px] mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 rounded-[3rem] p-2 shadow-2xl">
                   <div className="w-full h-full bg-black rounded-[2.5rem] overflow-hidden relative">
-                    <Image
-                      src="/screenshots/main.png"
-                      alt="Between Time 앱 메인 화면"
-                      width={320}
-                      height={592}
-                      className="w-full h-full object-cover"
-                      priority
-                    />
+                    <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                      <div className="text-center text-white">
+                        <div className="text-6xl mb-4">🌍</div>
+                        <div className="text-2xl font-bold">Between Time</div>
+                        <div className="text-lg opacity-80">앱 미리보기</div>
+                      </div>
+                    </div>
                     {/* Screen reflection */}
                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
                   </div>
