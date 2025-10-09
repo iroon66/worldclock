@@ -21,7 +21,6 @@ export const Header: React.FC = () => {
 
   const menuItems = [
     { href: '/#features', label: '주요 기능' },
-    { href: '/#how-it-works', label: '사용 방법' },
     { href: '/#screenshots', label: '스크린샷' },
     { href: '/#download', label: '다운로드' },
     { href: '/privacy', label: '개인정보 처리방침' },
