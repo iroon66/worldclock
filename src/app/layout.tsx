@@ -17,9 +17,9 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://betweentime.app'),
-  title: 'Between Time - 세계시계 앱',
+  title: 'worldclock - 세계시계 앱',
   description: '전 세계 시간대를 실시간으로 비교하세요. 위치 기반 자동 설정, 즐겨찾기 관리, 완벽한 프라이버시 보호.',
-  keywords: ['세계시계', '시간대 변환', 'world clock', 'timezone', '시차 계산', 'Between Time', '타임존'],
+  keywords: ['세계시계', '시간대 변환', 'world clock', 'timezone', '시차 계산', 'worldclock', '타임존'],
   authors: [{ name: 'iroon66' }],
   creator: 'iroon66',
   publisher: 'iroon66',
@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Between Time - 세계시계 앱',
+    title: 'worldclock - 세계시계 앱',
     description: '전 세계 시간대를 실시간으로 비교하세요',
     url: 'https://betweentime.app',
-    siteName: 'Between Time',
+    siteName: 'worldclock',
     locale: 'ko_KR',
     type: 'website',
     images: [
@@ -46,13 +46,13 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Between Time - 세계시계 앱',
+        alt: 'worldclock - 세계시계 앱',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Between Time - 세계시계 앱',
+    title: 'worldclock - 세계시계 앱',
     description: '전 세계 시간대를 실시간으로 비교하세요',
     images: ['/og-image.png'],
   },

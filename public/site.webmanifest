@@ -1,6 +1,6 @@
 {
-  "name": "Between Time - 세계시계 앱",
-  "short_name": "Between Time",
+  "name": "worldclock - 세계시계 앱",
+  "short_name": "worldclock",
   "description": "전 세계 시간대를 실시간으로 비교하세요",
   "start_url": "/",
   "display": "standalone",

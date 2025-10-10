@@ -1,14 +1,14 @@
-# Between Time - 세계시계 앱 랜딩페이지 🌍⏰
+# worldclock - 세계시계 앱 랜딩페이지 🌍⏰
 
-**Between Time**의 공식 랜딩페이지입니다. Next.js 15, TypeScript, Tailwind CSS로 제작되었습니다.
+**worldclock**의 공식 랜딩페이지입니다. Next.js 15, TypeScript, Tailwind CSS로 제작되었습니다.
 
-![Between Time](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
+![worldclock](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38B2AC?style=flat-square&logo=tailwind-css)
 
 ## 🎯 프로젝트 소개
 
-전 세계 어디서든 정확한 시간을 손쉽게 비교할 수 있는 "Between Time" 앱의 랜딩페이지입니다.
+전 세계 어디서든 정확한 시간을 손쉽게 비교할 수 있는 "worldclock" 앱의 랜딩페이지입니다.
 
 ### 주요 기능
 - 📱 실시간 시간대 변환
