@@ -37,7 +37,7 @@ export const Hero: React.FC = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
               <span className="gradient-text">세계와 연결되는</span>
               <br />
-              <span className="text-gray-900 dark:text-white">시간, Between Time</span>
+              <span className="text-gray-900 dark:text-white">시간, worldclock</span>
             </h1>
             
             <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
@@ -98,7 +98,7 @@ export const Hero: React.FC = () => {
                     <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex flex-col items-center justify-center p-8">
                       <div className="text-center text-white">
                         <div className="text-6xl mb-6">🌍</div>
-                        <div className="text-3xl font-bold mb-2">Between Time</div>
+                        <div className="text-3xl font-bold mb-2">worldclock</div>
                         <div className="text-lg opacity-80 mb-8">세계시계 앱</div>
                         
                         <div className="space-y-4 text-left">

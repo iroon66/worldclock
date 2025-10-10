@@ -40,7 +40,7 @@ export const Header: React.FC = () => {
             <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl shadow-md group-hover:shadow-lg transition-shadow duration-300 flex items-center justify-center">
               <span className="text-white font-bold text-lg">🌍</span>
             </div>
-            <span className="text-xl font-bold gradient-text">Between Time</span>
+            <span className="text-xl font-bold gradient-text">worldclock</span>
           </Link>
 
           {/* Desktop Menu */}

@@ -56,7 +56,7 @@ export const Screenshots: React.FC = () => {
             <span className="gradient-text">아름다운 인터페이스</span>
           </h2>
           <p className="text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Between Time의 깔끔하고 직관적인 인터페이스를 만나보세요
+            worldclock의 깔끔하고 직관적인 인터페이스를 만나보세요
           </p>
         </motion.div>
 

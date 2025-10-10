@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl shadow-lg flex items-center justify-center">
                   <span className="text-white font-bold text-xl">🌍</span>
                 </div>
-                <span className="text-2xl font-bold gradient-text">Between Time</span>
+                <span className="text-2xl font-bold gradient-text">worldclock</span>
               </Link>
               
               <p className="text-gray-400 mb-6 max-w-md leading-relaxed">

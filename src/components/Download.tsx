@@ -33,7 +33,7 @@ export const Download: React.FC = () => {
           </motion.div>
           
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            Between Time을 무료로 사용해보세요
+            worldclock을 무료로 사용해보세요
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-12">
             지금 바로 다운로드하고 전 세계 시간을 손쉽게 관리하세요

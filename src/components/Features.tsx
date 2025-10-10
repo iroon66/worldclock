@@ -81,7 +81,7 @@ export const Features: React.FC = () => {
             <span className="gradient-text">특별한 기능들</span>
           </h2>
           <p className="text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Between Time만의 독특하고 유용한 기능들로 시간 관리의 새로운 경험을 제공합니다
+            worldclock만의 독특하고 유용한 기능들로 시간 관리의 새로운 경험을 제공합니다
           </p>
         </motion.div>
 
