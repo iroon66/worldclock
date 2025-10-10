@@ -8,8 +8,8 @@ import { ArrowLeft } from 'lucide-react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '개인정보처리방침 - Between Time',
-  description: 'Between Time 앱의 개인정보처리방침',
+  title: '개인정보처리방침 - worldclock',
+  description: 'worldclock 앱의 개인정보처리방침',
 };
 
 async function getPrivacyPolicy() {
